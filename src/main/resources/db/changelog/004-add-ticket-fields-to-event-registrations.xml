@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+          http://www.liquibase.org/xml/ns/dbchangelog
+          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="004-add-ticket-fields-to-event-registrations" author="budzin">
+        <addColumn tableName="event_registrations">
+            <column name="ticket_token" type="VARCHAR(255)"/>
+            <column name="checked_in_at" type="TIMESTAMP"/>
+        </addColumn>
+
+        <addUniqueConstraint
+                tableName="event_registrations"
+                columnNames="ticket_token"
+                constraintName="uk_event_registrations_ticket_token"/>
+
+        <createIndex tableName="event_registrations" indexName="idx_event_registrations_ticket_token">
+            <column name="ticket_token"/>
+        </createIndex>
+    </changeSet>
+
+</databaseChangeLog>

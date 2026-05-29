@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: eventapp-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: eventapp
+      POSTGRES_USER: eventapp
+      POSTGRES_PASSWORD: eventapp123
+    ports:
+      - "5467:5432"
+    volumes:
+      - eventapp_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  eventapp_postgres_data:
