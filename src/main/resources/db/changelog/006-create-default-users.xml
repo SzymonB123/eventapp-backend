@@ -7,8 +7,10 @@
           http://www.liquibase.org/xml/ns/dbchangelog
           http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <changeSet id="006-create-default-admin" author="budzin">
+    <changeSet id="006-create-default-users" author="budzin">
+
         <insert tableName="users">
+            <column name="id" valueNumeric="1"/>
             <column name="email" value="admin@eventapp.com"/>
             <column name="password" value="$2a$10$irZiB2nm9K4AdRThInJMNOfEXVSLGeGA1Ev.Es9QS75JqluTS0oXS"/>
             <column name="first_name" value="Admin"/>
@@ -16,6 +18,31 @@
             <column name="role" value="ADMIN"/>
             <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
         </insert>
+
+        <insert tableName="users">
+            <column name="id" valueNumeric="2"/>
+            <column name="email" value="attendee@eventapp.com"/>
+            <column name="password" value="$2a$10$irZiB2nm9K4AdRThInJMNOfEXVSLGeGA1Ev.Es9QS75JqluTS0oXS"/>
+            <column name="first_name" value="Attendee"/>
+            <column name="last_name" value="EventApp"/>
+            <column name="role" value="ATTENDEE"/>
+            <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" valueNumeric="3"/>
+            <column name="email" value="organizer@eventapp.com"/>
+            <column name="password" value="$2a$10$irZiB2nm9K4AdRThInJMNOfEXVSLGeGA1Ev.Es9QS75JqluTS0oXS"/>
+            <column name="first_name" value="Organizer"/>
+            <column name="last_name" value="EventApp"/>
+            <column name="role" value="ORGANIZER"/>
+            <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
+        </insert>
+
+        <sql>
+            SELECT setval(pg_get_serial_sequence('users', 'id'), (SELECT MAX(id) FROM users));
+        </sql>
+
     </changeSet>
 
 </databaseChangeLog>
