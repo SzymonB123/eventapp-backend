@@ -58,6 +58,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/organizer/**").hasAnyRole("ORGANIZER", "ADMIN")
                         .requestMatchers("/api/attendee/**").hasAnyRole("ATTENDEE", "ORGANIZER", "ADMIN")
 
+                        .requestMatchers("/actuator/health").permitAll()
                         .requestMatchers(
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",

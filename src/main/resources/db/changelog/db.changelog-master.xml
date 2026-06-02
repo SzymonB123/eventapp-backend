@@ -13,5 +13,6 @@
     <include file="db/changelog/004-add-ticket-fields-to-event-registrations.xml"/>
     <include file="db/changelog/005-add-geocoding-fields-to-events.xml"/>
     <include file="db/changelog/006-create-default-admin.xml"/>
+    <include file="db/changelog/007-insert-sample-events.xml"/>
 
 </databaseChangeLog>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+          http://www.liquibase.org/xml/ns/dbchangelog
+          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="007-insert-sample-events" author="piotr">
+
+        <insert tableName="events">
+            <column name="title" value="Konferencja Security Web Apps"/>
+            <column name="description" value="Wydarzenie poświęcone bezpieczeństwu aplikacji webowych, JWT, Spring Security i dobrym praktykom."/>
+            <column name="location" value="Pałac Kultury i Nauki, Warszawa"/>
+            <column name="display_location" value="Pałac Kultury i Nauki, Warszawa, Polska"/>
+            <column name="latitude" valueNumeric="52.2319581"/>
+            <column name="longitude" valueNumeric="21.0067249"/>
+            <column name="start_time" valueDate="2026-06-20T10:00:00"/>
+            <column name="end_time" valueDate="2026-06-20T15:00:00"/>
+            <column name="capacity" valueNumeric="100"/>
+            <column name="organizer_id" valueNumeric="3"/>
+            <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
+        </insert>
+
+        <insert tableName="events">
+            <column name="title" value="Warsztaty Spring Boot i REST API"/>
+            <column name="description" value="Praktyczne warsztaty z tworzenia backendu w Spring Boot, projektowania REST API i obsługi bazy danych."/>
+            <column name="location" value="Centrum Nauki Kopernik, Warszawa"/>
+            <column name="display_location" value="Centrum Nauki Kopernik, Warszawa, Polska"/>
+            <column name="latitude" valueNumeric="52.241849"/>
+            <column name="longitude" valueNumeric="21.028058"/>
+            <column name="start_time" valueDate="2026-06-25T09:00:00"/>
+            <column name="end_time" valueDate="2026-06-25T14:00:00"/>
+            <column name="capacity" valueNumeric="40"/>
+            <column name="organizer_id" valueNumeric="3"/>
+            <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
+        </insert>
+
+        <insert tableName="events">
+            <column name="title" value="Meetup Java Developers"/>
+            <column name="description" value="Spotkanie dla programistów Javy. Tematy: clean code, testy, architektura aplikacji i dobre praktyki."/>
+            <column name="location" value="Politechnika Warszawska"/>
+            <column name="display_location" value="Politechnika Warszawska, Warszawa, Polska"/>
+            <column name="latitude" valueNumeric="52.220362"/>
+            <column name="longitude" valueNumeric="21.010049"/>
+            <column name="start_time" valueDate="2026-07-02T18:00:00"/>
+            <column name="end_time" valueDate="2026-07-02T21:00:00"/>
+            <column name="capacity" valueNumeric="80"/>
+            <column name="organizer_id" valueNumeric="3"/>
+            <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
+        </insert>
+
+        <insert tableName="events">
+            <column name="title" value="Hackathon EventApp"/>
+            <column name="description" value="Całodniowy hackathon dla zespołów frontendowych i backendowych. Celem jest stworzenie aplikacji eventowej."/>
+            <column name="location" value="Google for Startups Campus, Warszawa"/>
+            <column name="display_location" value="Google for Startups Campus, Warszawa, Polska"/>
+            <column name="latitude" valueNumeric="52.242051"/>
+            <column name="longitude" valueNumeric="21.042382"/>
+            <column name="start_time" valueDate="2026-07-10T08:00:00"/>
+            <column name="end_time" valueDate="2026-07-10T20:00:00"/>
+            <column name="capacity" valueNumeric="120"/>
+            <column name="organizer_id" valueNumeric="3"/>
+            <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
+        </insert>
+
+        <insert tableName="events">
+            <column name="title" value="Szkolenie z Docker i PostgreSQL"/>
+            <column name="description" value="Szkolenie z uruchamiania środowisk lokalnych przy pomocy Docker Compose oraz integracji aplikacji z PostgreSQL."/>
+            <column name="location" value="Rondo Daszyńskiego, Warszawa"/>
+            <column name="display_location" value="Rondo Daszyńskiego, Warszawa, Polska"/>
+            <column name="latitude" valueNumeric="52.230054"/>
+            <column name="longitude" valueNumeric="20.984949"/>
+            <column name="start_time" valueDate="2026-07-15T17:00:00"/>
+            <column name="end_time" valueDate="2026-07-15T20:00:00"/>
+            <column name="capacity" valueNumeric="60"/>
+            <column name="organizer_id" valueNumeric="3"/>
+            <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
+        </insert>
+
+        <insert tableName="events">
+            <column name="title" value="Frontend Night: Angular i React"/>
+            <column name="description" value="Wieczorne spotkanie o trendach frontendowych, komponentach, formularzach i integracji z backendem REST."/>
+            <column name="location" value="Fabryka Norblina, Warszawa"/>
+            <column name="display_location" value="Fabryka Norblina, Warszawa, Polska"/>
+            <column name="latitude" valueNumeric="52.233207"/>
+            <column name="longitude" valueNumeric="20.989476"/>
+            <column name="start_time" valueDate="2026-07-18T18:30:00"/>
+            <column name="end_time" valueDate="2026-07-18T22:00:00"/>
+            <column name="capacity" valueNumeric="90"/>
+            <column name="organizer_id" valueNumeric="3"/>
+            <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
+        </insert>
+
+        <insert tableName="events">
+            <column name="title" value="Seminarium Cyberbezpieczeństwo w praktyce"/>
+            <column name="description" value="Seminarium o podatnościach webowych, kontroli dostępu, IDOR, CORS, JWT i bezpiecznym projektowaniu API."/>
+            <column name="location" value="Biblioteka Uniwersytecka w Warszawie"/>
+            <column name="display_location" value="Biblioteka Uniwersytecka w Warszawie, Warszawa, Polska"/>
+            <column name="latitude" valueNumeric="52.242029"/>
+            <column name="longitude" valueNumeric="21.024892"/>
+            <column name="start_time" valueDate="2026-07-23T11:00:00"/>
+            <column name="end_time" valueDate="2026-07-23T16:00:00"/>
+            <column name="capacity" valueNumeric="70"/>
+            <column name="organizer_id" valueNumeric="3"/>
+            <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
+        </insert>
+
+        <insert tableName="events">
+            <column name="title" value="Networking IT Students"/>
+            <column name="description" value="Luźne spotkanie studentów informatyki, programistów i osób zainteresowanych projektami webowymi."/>
+            <column name="location" value="Plac Zbawiciela, Warszawa"/>
+            <column name="display_location" value="Plac Zbawiciela, Warszawa, Polska"/>
+            <column name="latitude" valueNumeric="52.219543"/>
+            <column name="longitude" valueNumeric="21.018332"/>
+            <column name="start_time" valueDate="2026-07-28T19:00:00"/>
+            <column name="end_time" valueDate="2026-07-28T22:00:00"/>
+            <column name="capacity" valueNumeric="50"/>
+            <column name="organizer_id" valueNumeric="3"/>
+            <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
+        </insert>
+
+        <insert tableName="events">
+            <column name="title" value="Prelekcja: Architektura aplikacji webowych"/>
+            <column name="description" value="Prelekcja o warstwach aplikacji, DTO, serwisach, repozytoriach, obsłudze błędów i separacji odpowiedzialności."/>
+            <column name="location" value="SGH Warszawa"/>
+            <column name="display_location" value="Szkoła Główna Handlowa, Warszawa, Polska"/>
+            <column name="latitude" valueNumeric="52.208856"/>
+            <column name="longitude" valueNumeric="21.008726"/>
+            <column name="start_time" valueDate="2026-08-05T10:00:00"/>
+            <column name="end_time" valueDate="2026-08-05T13:00:00"/>
+            <column name="capacity" valueNumeric="110"/>
+            <column name="organizer_id" valueNumeric="3"/>
+            <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
+        </insert>
+
+        <insert tableName="events">
+            <column name="title" value="Warsztaty QR Check-in System"/>
+            <column name="description" value="Warsztaty pokazujące implementację zapisów na wydarzenia, generowania QR kodów i procesu check-in."/>
+            <column name="location" value="Muzeum POLIN, Warszawa"/>
+            <column name="display_location" value="Muzeum Historii Żydów Polskich POLIN, Warszawa, Polska"/>
+            <column name="latitude" valueNumeric="52.249359"/>
+            <column name="longitude" valueNumeric="20.993107"/>
+            <column name="start_time" valueDate="2026-08-12T12:00:00"/>
+            <column name="end_time" valueDate="2026-08-12T17:00:00"/>
+            <column name="capacity" valueNumeric="45"/>
+            <column name="organizer_id" valueNumeric="3"/>
+            <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
